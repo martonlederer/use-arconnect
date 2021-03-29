@@ -1,6 +1,6 @@
 {
   "name": "use-arconnect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small utility library to use ArConnect with React apps",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
