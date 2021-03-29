@@ -5,9 +5,12 @@ const useArConnect = () => {
 
   useEffect(() => {
     const loadWallet = () => setArweaveWallet(window.arweaveWallet);
-    window.addEventListener("arweaveWalletLoaded", loadWallet);
-
-    return () => window.removeEventListener("arweaveWalletLoaded", loadWallet)
+    
+    if (window.arweaveWallet) {
+      loadWallet();
+    } else {
+      addEventListener("arweaveWalletLoaded", loadWallet);
+    }
   });
 
   return arweaveWallet;
